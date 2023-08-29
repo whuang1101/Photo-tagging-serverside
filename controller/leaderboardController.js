@@ -20,7 +20,7 @@ exports.post = asyncHandler(async(req, res, next) => {
     await newWinner.save();
     const findNewWinner = await Leaderboard.findOne({name: req.body.name, date: req.body.date})
     if(findNewWinner) {
-        res.status(201);
+        res.status(201).json({message:"success"});
     }
     else{
         res.status(500).json({message: "Error saving new winner"})
