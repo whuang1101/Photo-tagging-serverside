@@ -1,7 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-const path = require("path");
-const cookieParser = require("cookie-parser");
 const app = express();
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
